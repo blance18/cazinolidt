@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Казино Промокоды</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    header {
+      background: #000;
+      border-bottom: 3px solid #7f0000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+    header .tg-text {
+      color: #fff;
+    }
+    header .tg-link {
+      background: #7f0000;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+    h1 {
+      text-align: center;
+      padding: 30px 20px 10px;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+    }
+    .casino-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    @media (max-width: 992px) {
+      .casino-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .casino-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .casino-card {
+      background: #111;
+      border-radius: 20px;
+      padding: 20px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    .casino-card:nth-child(1) { animation-delay: 0.1s; }
+    .casino-card:nth-child(2) { animation-delay: 0.3s; }
+    .casino-card:nth-child(3) { animation-delay: 0.5s; }
+    .casino-card:nth-child(4) { animation-delay: 0.7s; }
+    .casino-card:nth-child(5) { animation-delay: 0.9s; }
+    .casino-card:nth-child(6) { animation-delay: 1.1s; }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .casino-name {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .bonus {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+    .promo {
+      font-weight: 600;
+      color: #fff;
+    }
+    .open-details {
+      background: #ff0000;
+      border: none;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      width: 100%;
+    }
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #111;
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 500px;
+      color: #fff;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: #ff0000;
+      cursor: pointer;
+    }
+    .modal-content h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      text-align: center;
+    }
+    .modal-content p {
+      margin: 15px 0;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+    .promo-code {
+      text-align: center;
+      background: #222;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 10px 0 20px;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 700;
+    }
+    .promo-code:hover {
+      background: #333;
+    }
+    .cta-button {
+      display: block;
+      text-align: center;
+      background: #ff0000;
+      color: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .cta-button:hover {
+      background: #cc0000;
+    }
+    footer {
+      background: #111;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    footer .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 16px;
+      text-decoration: underline;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="tg-text">tg: @blanceex</div>
+  <a href="https://t.me/+4MeeJkpGnWJmMDI6" target="_blank" class="tg-link">В Telegram</a>
+</header>
+
+<h1>Выбери казино</h1>
+<section class="casino-grid">
+  <div class="casino-card">
+    <div class="casino-name">Martin</div>
+    <div class="bonus">50 фриспинов и 225% к депозиту</div>
+    <div class="promo">Промокод: <strong>BLANCE50</strong></div>
+    <button class="open-details" onclick="openModal('Martin')">Подробнее</button>
+  </div>
+  <div class="casino-card">
+    <div class="casino-name">IZZI</div>
+    <div class="bonus">50 фриспинов и 225% к депозиту</div>
+    <div class="promo">Промокод: <strong>BLANCE50</strong></div>
+    <button class="open-details" onclick="openModal('IZZI')">Подробнее</button>
+  </div>
+  <div class="casino-card">
+    <div class="casino-name">STARDA</div>
+    <div class="bonus">50 фриспинов и 225% к депозиту</div>
+    <div class="promo">Промокод: <strong>BLANCE50</strong></div>
+    <button class="open-details" onclick="openModal('STARDA')">Подробнее</button>
+  </div>
+  <div class="casino-card">
+    <div class="casino-name">FLAGMAN</div>
+    <div class="bonus">50 фриспинов и 225% к депозиту</div>
+    <div class="promo">Промокод: <strong>BLANCE50</strong></div>
+    <button class="open-details" onclick="openModal('FLAGMAN')">Подробнее</button>
+  </div>
+  <div class="casino-card">
+    <div class="casino-name">IRWIN</div>
+    <div class="bonus">50 фриспинов и 225% к депозиту</div>
+    <div class="promo">Промокод: <strong>BLANCE50</strong></div>
+    <button class="open-details" onclick="openModal('IRWIN')">Подробнее</button>
+  </div>
+  <div class="casino-card">
+    <div class="casino-name">1WIN</div>
+    <div class="bonus">70 фриспинов и 500% к депозиту</div>
+    <div class="promo">Промокод: <strong>BLANCE</strong></div>
+    <button class="open-details" onclick="openModal('1WIN')">Подробнее</button>
+  </div>
+</section>
+
+<div id="modal" class="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal(event)">&times;</button>
+    <h2 id="modalTitle"></h2>
+    <div class="promo-code" id="promoCode" onclick="copyPromo()">Нажми, чтобы скопировать промокод</div>
+    <p id="modalText1"></p>
+    <p id="modalText2"></p>
+    <a id="refLink" class="cta-button" target="_blank" rel="noopener noreferrer">Перейти на оф. сайт</a>
+  </div>
+</div>
+
+<footer>
+  <p>Используй бонусы — и всё будет заебца 💸</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/blance192?igsh=MTVmdnZhd2lqcHB1eA%3D%3D&utm_source=qr" target="_blank">Instagram 1</a>
+    <a href="https://www.instagram.com/blan.ceflow?igsh=cmFja3B4Mmp4MWE3&utm_source=qr" target="_blank">Instagram 2</a>
+    <a href="https://www.instagram.com/blance_igor?igsh=MmxqeHVnc244cXRu&utm_source=qr" target="_blank">Instagram 3</a>
+    <a href="https://www.tiktok.com/@revxetii0073?_t=ZM-8xiSwtQCWyU&_r=1" target="_blank">TikTok</a>
+    <a href="https://t.me/blanceex" target="_blank">Telegram</a>
+  </div>
+</footer>
+
+<script>
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalText1 = document.getElementById("modalText1");
+  const modalText2 = document.getElementById("modalText2");
+  const promoCodeBlock = document.getElementById("promoCode");
+  const refLink = document.getElementById("refLink");
+
+  let currentPromo = "";
+
+  function openModal(casino) {
+    let title = '', text1 = '', text2 = '', promo = '', link = '#';
+
+    switch(casino) {
+      case 'Martin':
+        title = 'Martin — бонусы и подарки с первых минут';
+        promo = 'BLANCE50';
+        link = 'https://martin-way-six.com/cadd2755a';
+        text1 = 'Начни с уверенного старта: Martin дарит 50 фриспинов и 225% к первому депозиту.';
+        text2 = 'Просто введи промокод и забери свои бонусы уже сейчас.';
+        break;
+      case 'IZZI':
+        title = 'IZZI — заноси на старте';
+        promo = 'BLANCE50';
+        link = 'https://izzi-blrs10.com/c4f5940ef';
+        text1 = 'В IZZI ты получаешь сразу: 50 фриспинов и 225% бонус к пополнению.';
+        text2 = 'Просто активируй промокод и начинай выигрывать.';
+        break;
+      case 'STARDA':
+        title = 'STARDA — эпичный старт';
+        promo = 'BLANCE50';
+        link = 'https://strd-blse21.com/cea7bbb31';
+        text1 = 'Получай до 225% к депозиту и 50 бесплатных вращений.';
+        text2 = 'Промокод активирует бонус прямо при регистрации.';
+        break;
+      case 'FLAGMAN':
+        title = 'FLAGMAN — мощный бонус на входе';
+        promo = 'BLANCE50';
+        link = 'https://flagman-way-five.com/ca5fd750a';
+        text1 = 'Получай до 50 фриспинов и 225% к первому пополнению.';
+        text2 = 'Вводи промокод BLANCE50 и стартуй мощно.';
+        break;
+      case 'IRWIN':
+        title = 'IRWIN — подарки каждую неделю';
+        promo = 'BLANCE50';
+        link = 'https://irwinway3.com/c651c844a';
+        text1 = 'Только сейчас: 225% к депозиту и 50 фриспинов.';
+        text2 = 'Промокод активирует всё это сразу после активации.';
+        break;
+      case '1WIN':
+        title = '1WIN — бонус 500% и 70 фриспинов';
+        promo = 'BLANCE';
+        link = 'https://1wfzws.life/v3/aggressive-casino?p=nplh';
+        text1 = 'Максимальный старт: до 500% и 70 бесплатных вращений для новичков.';
+        text2 = 'Просто введи промокод BLANCE при регистрации.';
+        break;
+    }
+
+    currentPromo = promo;
+    modalTitle.textContent = title;
+    promoCodeBlock.textContent = `Промокод: ${promo} (нажми, чтобы скопировать)`;
+    modalText1.textContent = text1;
+    modalText2.textContent = text2;
+    refLink.href = link;
+    modal.classList.add("active");
+  }
+
+  function closeModal(e) {
+    modal.classList.remove("active");
+  }
+
+  function copyPromo() {
+    navigator.clipboard.writeText(currentPromo).then(() => {
+      promoCodeBlock.textContent = `✅ Промокод ${currentPromo} скопирован!`;
+      setTimeout(() => {
+        promoCodeBlock.textContent = `Промокод: ${currentPromo} (нажми, чтобы скопировать)`;
+      }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
